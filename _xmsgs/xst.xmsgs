@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompiler" num="607" delta="new" >"C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 110: Multiple declarations of <arg fmt="%s" index="1">&quot;&gt;&quot;</arg> included via multiple use clauses; none are made directly visible
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1731" delta="old" >"C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 131: found &apos;<arg fmt="%d" index="1">0</arg>&apos; definitions of operator <arg fmt="%s" index="2">&quot;+&quot;</arg>, cannot determine exact overloaded matching definition for <arg fmt="%s" index="2">&quot;+&quot;</arg>
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1731" delta="old" >"C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 139: found &apos;<arg fmt="%d" index="1">0</arg>&apos; definitions of operator <arg fmt="%s" index="2">&quot;-&quot;</arg>, cannot determine exact overloaded matching definition for <arg fmt="%s" index="2">&quot;-&quot;</arg>
+</msg>
+
+<msg type="error" file="HDLCompiler" num="854" delta="old" >"C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 48: Unit &lt;<arg fmt="%s" index="1">behavioral</arg>&gt; ignored due to previous errors.
+</msg>
+
+</messages>
+

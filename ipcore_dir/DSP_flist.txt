@@ -1,0 +1,14 @@
+# Output products list for <DSP>
+DSP.asy
+DSP.gise
+DSP.ngc
+DSP.sym
+DSP.vhd
+DSP.vho
+DSP.xco
+DSP.xise
+DSP\doc\cmpy_ds291.pdf
+DSP\doc\cmpy_v3_1_vinfo.html
+DSP_flist.txt
+DSP_readme.txt
+DSP_xmdf.tcl

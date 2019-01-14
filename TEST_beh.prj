@@ -1,0 +1,3 @@
+vhdl work "ipcore_dir/Adder.vhd"
+vhdl work "Main.vhd"
+vhdl work "TEST.vhd"

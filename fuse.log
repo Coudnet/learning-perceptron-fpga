@@ -1,0 +1,36 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/TEST_isim_beh.exe -prj C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/TEST_beh.prj work.TEST 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/ipcore_dir/Adder.vhd" into library work
+Parsing VHDL file "C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/Main.vhd" into library work
+Parsing VHDL file "C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/TEST.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 104804 KB
+Fuse CPU Usage: 405 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_signed
+Compiling package numeric_std
+Compiling package textio
+Compiling package bip_utils_pkg_v2_0
+Compiling package bip_usecase_utils_pkg_v2_0
+Compiling package xbip_pipe_v2_0_comp
+Compiling package std_logic_unsigned
+Compiling package xbip_accum_v2_0_pkg
+Compiling package mult_gen_pkg_v11_0
+Compiling package xbip_multaccum_pkg_v2_0
+Compiling architecture behavioral of entity xbip_pipe_v2_0 [\xbip_pipe_v2_0(0,1,0,0,1,0,0,"0...]
+Compiling architecture behavioral of entity xbip_multaccum_v2_0 [\xbip_multaccum_v2_0(0,"spartan6...]
+Compiling architecture adder_a of entity Adder [adder_default]
+Compiling architecture behavioral of entity Main [main_default]
+Compiling architecture behavior of entity test
+Time Resolution for simulation is 1ps.
+Waiting for 10 sub-compilation(s) to finish...
+Compiled 22 VHDL Units
+Built simulation executable C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/TEST_isim_beh.exe
+Fuse Memory Usage: 142100 KB
+Fuse CPU Usage: 811 ms

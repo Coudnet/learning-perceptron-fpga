@@ -1,0 +1,15 @@
+# Output products list for <MULTIPLYADDER>
+MULTIPLYADDER.asy
+MULTIPLYADDER.gise
+MULTIPLYADDER.ngc
+MULTIPLYADDER.sym
+MULTIPLYADDER.vhd
+MULTIPLYADDER.vho
+MULTIPLYADDER.xco
+MULTIPLYADDER.xise
+MULTIPLYADDER\doc\xbip_multadd_ds717.pdf
+MULTIPLYADDER\doc\xbip_multadd_v2_0_readme.txt
+MULTIPLYADDER\doc\xbip_multadd_v2_0_vinfo.html
+MULTIPLYADDER_flist.txt
+MULTIPLYADDER_xmdf.tcl
+_xmsgs\pn_parser.xmsgs
