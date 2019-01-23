@@ -5,16 +5,37 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="607" delta="new" >"C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 110: Multiple declarations of <arg fmt="%s" index="1">&quot;&gt;&quot;</arg> included via multiple use clauses; none are made directly visible
+<msg type="warning" file="HDLCompiler" num="871" delta="new" >"C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 82: Using initial value <arg fmt="%s" index="1">&quot;000000000000000000111&quot;</arg> for <arg fmt="%s" index="2">threshold</arg> since it is never assigned
 </msg>
 
-<msg type="error" file="HDLCompiler" num="1731" delta="old" >"C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 131: found &apos;<arg fmt="%d" index="1">0</arg>&apos; definitions of operator <arg fmt="%s" index="2">&quot;+&quot;</arg>, cannot determine exact overloaded matching definition for <arg fmt="%s" index="2">&quot;+&quot;</arg>
+<msg type="warning" file="HDLCompiler" num="871" delta="new" >"C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 88: Using initial value <arg fmt="%s" index="1">false</arg> for <arg fmt="%s" index="2">counter_en</arg> since it is never assigned
 </msg>
 
-<msg type="error" file="HDLCompiler" num="1731" delta="old" >"C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 139: found &apos;<arg fmt="%d" index="1">0</arg>&apos; definitions of operator <arg fmt="%s" index="2">&quot;-&quot;</arg>, cannot determine exact overloaded matching definition for <arg fmt="%s" index="2">&quot;-&quot;</arg>
+<msg type="warning" file="HDLCompiler" num="871" delta="new" >"C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 92: Using initial value <arg fmt="%s" index="1">&apos;1&apos;</arg> for <arg fmt="%s" index="2">multiply_ce_t</arg> since it is never assigned
 </msg>
 
-<msg type="error" file="HDLCompiler" num="854" delta="old" >"C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 48: Unit &lt;<arg fmt="%s" index="1">behavioral</arg>&gt; ignored due to previous errors.
+<msg type="warning" file="HDLCompiler" num="871" delta="new" >"C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 93: Using initial value <arg fmt="%s" index="1">&apos;0&apos;</arg> for <arg fmt="%s" index="2">multiply_sclr_t</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="871" delta="new" >"C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 99: Using initial value <arg fmt="%s" index="1">&apos;0&apos;</arg> for <arg fmt="%s" index="2">multiply_subtract</arg> since it is never assigned
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd</arg>&quot; line <arg fmt="%s" index="2">111</arg>: Output port &lt;<arg fmt="%s" index="3">pcout</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">MULTIPLYINST</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="new" >State <arg fmt="%s" index="1">idle</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">condition</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">counter_val</arg>&lt;<arg fmt="%d" index="2">1</arg>:<arg fmt="%d" index="3">32</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">Main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">multiply_clk_t</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Main</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">multiply_clk_t</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Main</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>

@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="NgdBuild" timeStamp="Mon Jan 14 14:32:18 2019">
+  <application stringID="NgdBuild" timeStamp="Wed Jan 23 12:46:06 2019">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -16,7 +16,7 @@
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\\lib\nt;C:\Xilinx\14.7\ISE_DS\ISE\\bin\nt;C:\Xilinx\14.7\ISE_DS\ISE\bin\nt;C:\Xilinx\14.7\ISE_DS\ISE\lib\nt;C:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\14.7\ISE_DS\PlanAhead\bin;C:\Xilinx\14.7\ISE_DS\EDK\bin\nt;C:\Xilinx\14.7\ISE_DS\EDK\lib\nt;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt_be\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt_le\bin;C:\Xilinx\14.7\ISE_DS\common\bin\nt;C:\Xilinx\14.7\ISE_DS\common\lib\nt;C:\Xilinx\10.1\ISE\bin\nt;C:\Xilinx\10.1\ISE\lib\nt;C:\Xilinx\10.1\ISE\smartmodel\nt\installed_nt\lib\pcnt.lib;C:\WinAVR-20100110\bin;C:\WinAVR-20100110\utils\bin;C:\Program Files\Python36-32\Scripts\;C:\Program Files\Python36-32\;C:\Python27\;C:\Python27\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\OpenCL SDK\2.0\bin\x86;C:\DWIMperl\perl\bin;C:\DWIMperl\perl\site\bin;C:\DWIMperl\c\bin;C:\Program Files\CMake\bin;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseHg\;C:\Program Files\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\dotnet\;C:\texlive\2017\bin\win32;C:\Program Files\IVI Foundation\VISA\WinNT\Bin\;C:\Program Files\IVI Foundation\VISA\WinNT\Bin;C:\Program Files\IVI Foundation\IVI\bin"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\\lib\nt;C:\Xilinx\14.7\ISE_DS\ISE\\bin\nt;C:\Xilinx\14.7\ISE_DS\ISE\bin\nt;C:\Xilinx\14.7\ISE_DS\ISE\lib\nt;C:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\14.7\ISE_DS\PlanAhead\bin;C:\Xilinx\14.7\ISE_DS\EDK\bin\nt;C:\Xilinx\14.7\ISE_DS\EDK\lib\nt;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt_be\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt_le\bin;C:\Xilinx\14.7\ISE_DS\common\bin\nt;C:\Xilinx\14.7\ISE_DS\common\lib\nt;C:\Xilinx\10.1\ISE\bin\nt;C:\Xilinx\10.1\ISE\lib\nt;C:\Xilinx\10.1\ISE\smartmodel\nt\installed_nt\lib\pcnt.lib;C:\WinAVR-20100110\bin;C:\WinAVR-20100110\utils\bin;C:\Program Files\Python36-32\Scripts\;C:\Program Files\Python36-32\;C:\Python27\;C:\Python27\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\OpenCL SDK\2.0\bin\x86;C:\DWIMperl\perl\bin;C:\DWIMperl\perl\site\bin;C:\DWIMperl\c\bin;C:\Program Files\CMake\bin;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseHg\;C:\Program Files\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\dotnet\;C:\texlive\2017\bin\win32;C:\Program Files\IVI Foundation\VISA\WinNT\Bin\;C:\Program Files\IVI Foundation\VISA\WinNT\Bin;C:\Program Files\IVI Foundation\IVI\bin;C:\Program Files\P-CAD 2006 Viewer\"/>
         </row>
         <row stringID="row" value="2">
           <item stringID="variable" value="PATHEXT"/>
@@ -71,28 +71,52 @@
       </section>
       <section stringID="NGDBUILD_PRE_UNISIM_SUMMARY">
         <item dataType="int" stringID="NGDBUILD_NUM_BUFGP" value="1"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_DSP48A1" value="1"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_GND" value="2"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_IBUF" value="16"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_DSP48A1" value="3"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FD" value="13"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDE" value="326"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_GND" value="4"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_IBUF" value="17"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INV" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="7"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="36"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="20"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="341"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="1"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_SRLC16E" value="3"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="4"/>
       </section>
       <section stringID="NGDBUILD_POST_UNISIM_SUMMARY">
         <item dataType="int" stringID="NGDBUILD_NUM_BUFG" value="1"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_DSP48A1" value="1"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_GND" value="2"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_IBUF" value="16"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_DSP48A1" value="3"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FD" value="13"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDE" value="326"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_GND" value="4"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_IBUF" value="17"/>
         <item dataType="int" stringID="NGDBUILD_NUM_IBUFG" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INV" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="7"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="36"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="20"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="341"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="1"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_SRLC16E" value="3"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="4"/>
       </section>
       <section stringID="NGDBUILD_CORE_SUMMARY">
-        <item COUNT="1" stringID="NGDBUILD_CORE" value="xbip_multaccum_v2_0, Xilinx CORE Generator 14.7"/>
+        <item COUNT="1" stringID="NGDBUILD_CORE" value="xbip_multadd_v2_0, Xilinx CORE Generator 14.7"/>
         <section stringID="NGDBUILD_CORE_GENERATION_SUMMARY">
           <section stringID="NGDBUILD_CORE_INSTANCES">
-            <scope stringID="NGDBUILD_CORE_INSTANCE" value="Adder">
-              <item stringID="NGDBUILD_CORE_INFO" type="xbip_multaccum_v2_0" value="Adder"/>
-              <item c_a_type="0" c_a_width="15" c_accum_mode="0" c_accum_width="48" c_b_type="0" c_b_width="15" c_bypass_low="0" c_ce_overrides_sclr="0" c_has_bypass="0" c_latency="1" c_out_width="16" c_round_type="0" c_use_dsp48="1" c_verbosity="0" c_xdevicefamily="spartan6" stringID="NGDBUILD_CORE_PARAMETERS" value="Adder"/>
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="DECREMENT">
+              <item stringID="NGDBUILD_CORE_INFO" type="c_addsub_v11_0" value="DECREMENT"/>
+              <item c_a_type="1" c_a_width="16" c_add_mode="1" c_ainit_val="0" c_b_constant="1" c_b_type="1" c_b_value="1" c_b_width="1" c_borrow_low="1" c_bypass_low="0" c_ce_overrides_bypass="1" c_ce_overrides_sclr="0" c_has_bypass="0" c_has_c_in="0" c_has_c_out="0" c_has_ce="0" c_has_sclr="0" c_has_sinit="0" c_has_sset="0" c_implementation="1" c_latency="1" c_out_width="16" c_sclr_overrides_sset="1" c_sinit_val="0" c_verbosity="0" c_xdevicefamily="spartan6" stringID="NGDBUILD_CORE_PARAMETERS" value="DECREMENT"/>
+            </scope>
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="INCREMENT">
+              <item stringID="NGDBUILD_CORE_INFO" type="c_addsub_v11_0" value="INCREMENT"/>
+              <item c_a_type="1" c_a_width="16" c_add_mode="0" c_ainit_val="0" c_b_constant="1" c_b_type="1" c_b_value="1" c_b_width="1" c_borrow_low="1" c_bypass_low="0" c_ce_overrides_bypass="1" c_ce_overrides_sclr="0" c_has_bypass="0" c_has_c_in="0" c_has_c_out="0" c_has_ce="0" c_has_sclr="0" c_has_sinit="0" c_has_sset="0" c_implementation="1" c_latency="1" c_out_width="16" c_sclr_overrides_sset="1" c_sinit_val="0" c_verbosity="0" c_xdevicefamily="spartan6" stringID="NGDBUILD_CORE_PARAMETERS" value="INCREMENT"/>
+            </scope>
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="MULTIPLY">
+              <item stringID="NGDBUILD_CORE_INFO" type="xbip_multadd_v2_0" value="MULTIPLY"/>
+              <item C_AB_LATENCY="-1" C_A_TYPE="1" C_A_WIDTH="1" C_B_TYPE="1" C_B_WIDTH="16" C_CE_OVERRIDES_SCLR="0" C_C_LATENCY="-1" C_C_TYPE="1" C_C_WIDTH="20" C_OUT_HIGH="19" C_OUT_LOW="0" C_TEST_CORE="0" C_USE_PCIN="0" C_VERBOSITY="0" C_XDEVICEFAMILY="spartan6" stringID="NGDBUILD_CORE_PARAMETERS" value="MULTIPLY"/>
             </scope>
           </section>
         </section>

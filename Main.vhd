@@ -19,14 +19,9 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.std_logic_textio.all;
-use IEEE.std_logic_arith.all;
-use IEEE.numeric_bit.all;
-use IEEE.numeric_std.all;
-use IEEE.std_logic_signed.all;
+
+
 use IEEE.std_logic_unsigned.all;
-use IEEE.math_real.all;
-use IEEE.math_complex.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -47,24 +42,44 @@ end Main;
 
 architecture Behavioral of Main is
 
-COMPONENT Adder
+COMPONENT MULTIPLY
   PORT (
     clk : IN STD_LOGIC;
     ce : IN STD_LOGIC;
     sclr : IN STD_LOGIC;
-    a : IN STD_LOGIC_VECTOR(14 DOWNTO 0);
-    b : IN STD_LOGIC_VECTOR(14 DOWNTO 0);
+    a : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    b : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    c : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
+    subtract : IN STD_LOGIC;
+    p : OUT STD_LOGIC_VECTOR(19 DOWNTO 0);
+    pcout : OUT STD_LOGIC_VECTOR(47 DOWNTO 0)
+  );
+END COMPONENT;
+
+COMPONENT INCREMENT
+  PORT (
+    a : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    clk : IN STD_LOGIC;
     s : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
   );
 END COMPONENT;
 
-signal weight_t : STD_LOGIC_VECTOR(14 DOWNTO 0) := "111111111111111";
-signal result_t : STD_LOGIC_VECTOR(15 DOWNTO 0);
-signal sclr_t : STD_LOGIC := '0';
-signal endc_t : STD_LOGIC;
-signal ce_t : STD_LOGIC;
+COMPONENT DECREMENT
+  PORT (
+    a : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    clk : IN STD_LOGIC;
+    s : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+  );
+END COMPONENT;
 
-signal threshold : STD_LOGIC_VECTOR(15 DOWNTO 0) := "000000000000111";
+signal result_t : STD_LOGIC_VECTOR(19 DOWNTO 0);
+
+signal endc_t : STD_LOGIC;
+
+type weights is array (15 DOWNTO 0) of STD_LOGIC_VECTOR(15 DOWNTO 0);
+signal weights_t : weights;
+
+signal threshold : STD_LOGIC_VECTOR(20 DOWNTO 0) := "000000000000000000111";
 signal active_t : STD_LOGIC;
 
 type condition_type is (INIT, SUM, IDLE, COMPARE, ACTIVATION,  ENDCS, INC, DEC);
@@ -73,18 +88,53 @@ signal condition : condition_type := INIT;
 signal counter_en : boolean := false;
 signal counter_val : integer := 0;
 
+signal multiply_clk_t : STD_LOGIC;
+signal multiply_ce_t : STD_LOGIC := '1';
+signal multiply_sclr_t : STD_LOGIC := '0';
+signal multiply_a : STD_LOGIC_VECTOR(0 DOWNTO 0);
+signal multiply_b : STD_LOGIC_VECTOR(15 DOWNTO 0);
+signal multiply_c : STD_LOGIC_VECTOR(19 DOWNTO 0);
+signal multiply_res : STD_LOGIC_VECTOR(19 DOWNTO 0);
+signal multiply_pcout : STD_LOGIC_VECTOR(47 DOWNTO 0);
+signal multiply_subtract : STD_LOGIC := '0';
+
+signal inc_clk : STD_LOGIC;
+signal inc_in : STD_LOGIC_VECTOR(15 DOWNTO 0);
+signal inc_res : STD_LOGIC_VECTOR(15 DOWNTO 0);
+
+signal dec_clk : STD_LOGIC;
+signal dec_in : STD_LOGIC_VECTOR(15 DOWNTO 0);
+signal dec_res : STD_LOGIC_VECTOR(15 DOWNTO 0);
+
 begin
 
-Adder_Inst : Adder
+MULTIPLYINST : MULTIPLY
   PORT MAP (
-    clk => CLK,
-    ce => ce_t,
-    sclr => sclr_t,
-    a => DATA,
-    b => weight_t,
-    s => result_t
+	 clk => multiply_clk_t,
+	 ce => multiply_ce_t,
+	 sclr => multiply_sclr_t,
+	 a => multiply_a,
+	 b => multiply_b,
+	 c => multiply_c,
+	 subtract => multiply_subtract,
+	 p => multiply_res,
+	 pcout => multiply_pcout
   );
-
+	  
+INCREMENTINST : INCREMENT
+	PORT MAP (
+		a => inc_in,
+		clk => inc_clk,
+		s => inc_res
+	);
+	
+DECREMENTINST : DECREMENT
+	PORT MAP (
+		a => dec_in,
+		clk => dec_clk,
+		s => dec_res
+	);
+	
 process(CLK)
 begin
 	if(CLK'event and CLK = '1') then
@@ -96,12 +146,18 @@ begin
 				end if;
 				
 			when SUM =>
-				ce_t <= '1';
-				counter_en <= true;
-				condition <= IDLE;
+				result_t <= "00000000000000000000";
+				for i in 0 to 14 loop
+					multiply_a(0) <= DATA(i);
+					multiply_b <= weights_t(i);
+					multiply_c <= result_t;
+					multiply_clk_t <= '1';
+					multiply_clk_t <= '0';
+					result_t <= multiply_res;
+				end loop;
+				condition <= ACTIVATION;
 				
 			when IDLE =>
-				ce_t <= '1';
 				if(counter_val = 3) then 
 					condition <= ACTIVATION;
 				end if;
@@ -128,7 +184,10 @@ begin
 			when INC => 
 				for i in 0 to 14 loop
 					if(DATA(i) = '1') then
-						weight_t(i) <= weight_t(i) + 1;
+						inc_in <= weights_t(i);
+						inc_clk <= '1';
+						inc_clk <= '0';
+						weights_t(i) <= inc_res;
 					end if;
 				end loop;
 				condition <= ENDCS;
@@ -136,7 +195,10 @@ begin
 			when DEC => 
 				for i in 0 to 14 loop
 					if(DATA(i) = '1') then
-						weight_t(i) <= weight_t(i) - 1;
+						dec_in <= weights_t(i);
+						dec_clk <= '1';
+						dec_clk <= '0';
+						weights_t(i) <= dec_res;
 					end if;
 				end loop;
 				condition <= ENDCS;
@@ -144,6 +206,7 @@ begin
 			when ENDCS => 
 				endc_t <= '1';
 				condition <= INIT;
+				
 		end case;
 
 		if(counter_en = true) then

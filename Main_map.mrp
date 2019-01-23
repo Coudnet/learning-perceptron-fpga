@@ -10,30 +10,64 @@ Target Device  : xc6slx4
 Target Package : tqg144
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Mon Jan 14 14:32:24 2019
+Mapped Date    : Wed Jan 23 12:46:10 2019
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   17
+Number of warnings:    0
 Slice Logic Utilization:
-  Number of Slice Registers:                     0 out of   4,800    0%
-  Number of Slice LUTs:                          0 out of   2,400    0%
+  Number of Slice Registers:                   339 out of   4,800    7%
+    Number used as Flip Flops:                 339
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        416 out of   2,400   17%
+    Number used as logic:                      405 out of   2,400   16%
+      Number using O6 output only:             405
+      Number using O5 output only:               0
+      Number using O5 and O6:                    0
+      Number used as ROM:                        0
+    Number used as Memory:                       3 out of   1,200    1%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:             3
+        Number using O6 output only:             3
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:      8
+      Number with same-slice register load:      8
+      Number with same-slice carry load:         0
+      Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                     0 out of     600    0%
+  Number of occupied Slices:                   135 out of     600   22%
   Number of MUXCYs used:                         0 out of   1,200    0%
-  Number of LUT Flip Flop pairs used:            0
+  Number of LUT Flip Flop pairs used:          434
+    Number with an unused Flip Flop:           103 out of     434   23%
+    Number with an unused LUT:                  18 out of     434    4%
+    Number of fully used LUT-FF pairs:         313 out of     434   72%
+    Number of unique control sets:               6
+    Number of slice register sites lost
+      to control set restrictions:              10 out of   4,800    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                         1 out of     102    1%
+  Number of bonded IOBs:                        19 out of     102   18%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      12    0%
   Number of RAMB8BWERs:                          0 out of      24    0%
   Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
   Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
-  Number of BUFG/BUFGMUXs:                       0 out of      16    0%
+  Number of BUFG/BUFGMUXs:                       1 out of      16    6%
+    Number used as BUFGs:                        1
+    Number used as BUFGMUX:                      0
   Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
   Number of ILOGIC2/ISERDES2s:                   0 out of     200    0%
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
@@ -42,7 +76,7 @@ Specific Feature Utilization:
   Number of BUFHs:                               0 out of     128    0%
   Number of BUFPLLs:                             0 out of       8    0%
   Number of BUFPLL_MCBs:                         0 out of       4    0%
-  Number of DSP48A1s:                            0 out of       8    0%
+  Number of DSP48A1s:                            3 out of       8   37%
   Number of ICAPs:                               0 out of       1    0%
   Number of PCILOGICSEs:                         0 out of       2    0%
   Number of PLL_ADVs:                            0 out of       2    0%
@@ -50,9 +84,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Peak Memory Usage:  241 MB
-Total REAL time to MAP completion:  8 secs 
-Total CPU time to MAP completion:   4 secs 
+Average Fanout of Non-Clock Nets:                4.99
+
+Peak Memory Usage:  252 MB
+Total REAL time to MAP completion:  7 secs 
+Total CPU time to MAP completion:   6 secs 
 
 Table of Contents
 -----------------
@@ -75,51 +111,17 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:MapLib:701 - Signal DATA<14> connected to top level port DATA<14> has
-   been removed.
-WARNING:MapLib:701 - Signal DATA<13> connected to top level port DATA<13> has
-   been removed.
-WARNING:MapLib:701 - Signal DATA<12> connected to top level port DATA<12> has
-   been removed.
-WARNING:MapLib:701 - Signal DATA<11> connected to top level port DATA<11> has
-   been removed.
-WARNING:MapLib:701 - Signal DATA<10> connected to top level port DATA<10> has
-   been removed.
-WARNING:MapLib:701 - Signal DATA<9> connected to top level port DATA<9> has been
-   removed.
-WARNING:MapLib:701 - Signal DATA<8> connected to top level port DATA<8> has been
-   removed.
-WARNING:MapLib:701 - Signal DATA<7> connected to top level port DATA<7> has been
-   removed.
-WARNING:MapLib:701 - Signal DATA<6> connected to top level port DATA<6> has been
-   removed.
-WARNING:MapLib:701 - Signal DATA<5> connected to top level port DATA<5> has been
-   removed.
-WARNING:MapLib:701 - Signal DATA<4> connected to top level port DATA<4> has been
-   removed.
-WARNING:MapLib:701 - Signal DATA<3> connected to top level port DATA<3> has been
-   removed.
-WARNING:MapLib:701 - Signal DATA<2> connected to top level port DATA<2> has been
-   removed.
-WARNING:MapLib:701 - Signal DATA<1> connected to top level port DATA<1> has been
-   removed.
-WARNING:MapLib:701 - Signal DATA<0> connected to top level port DATA<0> has been
-   removed.
-WARNING:MapLib:701 - Signal START connected to top level port START has been
-   removed.
-WARNING:MapLib:701 - Signal CLK connected to top level port CLK has been
-   removed.
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network RES has no load.
-INFO:LIT:395 - The above info message is repeated 16 more times for the
+INFO:LIT:243 - Logical network MULTIPLYINST/pcout<47> has no load.
+INFO:LIT:395 - The above info message is repeated 47 more times for the
    following (max. 5 shown):
-   Adder_Inst/s<15>,
-   Adder_Inst/s<14>,
-   Adder_Inst/s<13>,
-   Adder_Inst/s<12>,
-   Adder_Inst/s<11>
+   MULTIPLYINST/pcout<46>,
+   MULTIPLYINST/pcout<45>,
+   MULTIPLYINST/pcout<44>,
+   MULTIPLYINST/pcout<43>,
+   MULTIPLYINST/pcout<42>
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
@@ -135,9 +137,8 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-  39 block(s) removed
-   1 block(s) optimized away
-  54 signal(s) removed
+   8 block(s) optimized away
+  48 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -152,110 +153,64 @@ To quickly locate the original cause for the removal of a chain of logic, look
 above the place where that logic is listed in the trimming report, then locate
 the lines that are least indented (begin at the leftmost edge).
 
-The signal "CLK_BUFGP/IBUFG" is sourceless and has been removed.
- Sourceless block "CLK_BUFGP/BUFG" (CKBUF) removed.
-  The signal "CLK_BUFGP" is sourceless and has been removed.
-The signal "Adder_Inst/s<15>" is sourceless and has been removed.
-The signal "Adder_Inst/s<14>" is sourceless and has been removed.
-The signal "Adder_Inst/s<13>" is sourceless and has been removed.
-The signal "Adder_Inst/s<12>" is sourceless and has been removed.
-The signal "Adder_Inst/s<11>" is sourceless and has been removed.
-The signal "Adder_Inst/s<10>" is sourceless and has been removed.
-The signal "Adder_Inst/s<9>" is sourceless and has been removed.
-The signal "Adder_Inst/s<8>" is sourceless and has been removed.
-The signal "Adder_Inst/s<7>" is sourceless and has been removed.
-The signal "Adder_Inst/s<6>" is sourceless and has been removed.
-The signal "Adder_Inst/s<5>" is sourceless and has been removed.
-The signal "Adder_Inst/s<4>" is sourceless and has been removed.
-The signal "Adder_Inst/s<3>" is sourceless and has been removed.
-The signal "Adder_Inst/s<2>" is sourceless and has been removed.
-The signal "Adder_Inst/s<1>" is sourceless and has been removed.
-The signal "Adder_Inst/s<0>" is sourceless and has been removed.
-The signal "Adder_Inst/blk00000001/sig00000032" is sourceless and has been
-removed.
-The signal "Adder_Inst/blk00000001/sig00000033" is sourceless and has been
-removed.
-
-The trimmed logic reported below is either:
-   1. part of a cycle
-   2. part of disabled logic
-   3. a side-effect of other trimmed logic
-
-The signal "DATA_14_IBUF" is unused and has been removed.
- Unused block "DATA_14_IBUF" (BUF) removed.
-  The signal "DATA<14>" is unused and has been removed.
-   Unused block "DATA<14>" (PAD) removed.
-The signal "DATA_13_IBUF" is unused and has been removed.
- Unused block "DATA_13_IBUF" (BUF) removed.
-  The signal "DATA<13>" is unused and has been removed.
-   Unused block "DATA<13>" (PAD) removed.
-The signal "DATA_12_IBUF" is unused and has been removed.
- Unused block "DATA_12_IBUF" (BUF) removed.
-  The signal "DATA<12>" is unused and has been removed.
-   Unused block "DATA<12>" (PAD) removed.
-The signal "DATA_11_IBUF" is unused and has been removed.
- Unused block "DATA_11_IBUF" (BUF) removed.
-  The signal "DATA<11>" is unused and has been removed.
-   Unused block "DATA<11>" (PAD) removed.
-The signal "DATA_10_IBUF" is unused and has been removed.
- Unused block "DATA_10_IBUF" (BUF) removed.
-  The signal "DATA<10>" is unused and has been removed.
-   Unused block "DATA<10>" (PAD) removed.
-The signal "DATA_9_IBUF" is unused and has been removed.
- Unused block "DATA_9_IBUF" (BUF) removed.
-  The signal "DATA<9>" is unused and has been removed.
-   Unused block "DATA<9>" (PAD) removed.
-The signal "DATA_8_IBUF" is unused and has been removed.
- Unused block "DATA_8_IBUF" (BUF) removed.
-  The signal "DATA<8>" is unused and has been removed.
-   Unused block "DATA<8>" (PAD) removed.
-The signal "DATA_7_IBUF" is unused and has been removed.
- Unused block "DATA_7_IBUF" (BUF) removed.
-  The signal "DATA<7>" is unused and has been removed.
-   Unused block "DATA<7>" (PAD) removed.
-The signal "DATA_6_IBUF" is unused and has been removed.
- Unused block "DATA_6_IBUF" (BUF) removed.
-  The signal "DATA<6>" is unused and has been removed.
-   Unused block "DATA<6>" (PAD) removed.
-The signal "DATA_5_IBUF" is unused and has been removed.
- Unused block "DATA_5_IBUF" (BUF) removed.
-  The signal "DATA<5>" is unused and has been removed.
-   Unused block "DATA<5>" (PAD) removed.
-The signal "DATA_4_IBUF" is unused and has been removed.
- Unused block "DATA_4_IBUF" (BUF) removed.
-  The signal "DATA<4>" is unused and has been removed.
-   Unused block "DATA<4>" (PAD) removed.
-The signal "DATA_3_IBUF" is unused and has been removed.
- Unused block "DATA_3_IBUF" (BUF) removed.
-  The signal "DATA<3>" is unused and has been removed.
-   Unused block "DATA<3>" (PAD) removed.
-The signal "DATA_2_IBUF" is unused and has been removed.
- Unused block "DATA_2_IBUF" (BUF) removed.
-  The signal "DATA<2>" is unused and has been removed.
-   Unused block "DATA<2>" (PAD) removed.
-The signal "DATA_1_IBUF" is unused and has been removed.
- Unused block "DATA_1_IBUF" (BUF) removed.
-  The signal "DATA<1>" is unused and has been removed.
-   Unused block "DATA<1>" (PAD) removed.
-The signal "DATA_0_IBUF" is unused and has been removed.
- Unused block "DATA_0_IBUF" (BUF) removed.
-  The signal "DATA<0>" is unused and has been removed.
-   Unused block "DATA<0>" (PAD) removed.
-The signal "START_IBUF" is unused and has been removed.
- Unused block "START_IBUF" (BUF) removed.
-  The signal "START" is unused and has been removed.
-   Unused block "START" (PAD) removed.
-The signal "weight_t<1>" is unused and has been removed.
- Unused block "XST_GND" (ZERO) removed.
-The signal "CLK" is unused and has been removed.
- Unused block "CLK" (PAD) removed.
-Unused block "Adder_Inst/blk00000001/blk00000002" (ONE) removed.
-Unused block "Adder_Inst/blk00000001/blk00000003" (ZERO) removed.
-Unused block "Adder_Inst/blk00000001/blk00000004" (DSP48A1) removed.
-Unused block "CLK_BUFGP/IBUFG" (CKBUF) removed.
+The signal "MULTIPLYINST/pcout<47>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<46>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<45>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<44>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<43>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<42>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<41>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<40>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<39>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<38>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<37>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<36>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<35>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<34>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<33>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<32>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<31>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<30>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<29>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<28>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<27>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<26>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<25>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<24>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<23>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<22>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<21>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<20>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<19>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<18>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<17>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<16>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<15>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<14>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<13>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<12>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<11>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<10>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<9>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<8>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<7>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<6>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<5>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<4>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<3>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<2>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<1>" is sourceless and has been removed.
+The signal "MULTIPLYINST/pcout<0>" is sourceless and has been removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
+VCC 		DECREMENTINST/blk00000001/blk00000002
+GND 		DECREMENTINST/blk00000001/blk00000003
+VCC 		INCREMENTINST/blk00000001/blk00000002
+GND 		INCREMENTINST/blk00000001/blk00000003
+VCC 		MULTIPLYINST/blk00000001/blk00000002
+GND 		MULTIPLYINST/blk00000001/blk00000003
+GND 		XST_GND
 VCC 		XST_VCC
 
 Section 6 - IOB Properties
@@ -265,7 +220,25 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| CLK                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA<0>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA<1>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA<2>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA<3>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA<4>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA<5>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA<6>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA<7>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA<8>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA<9>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA<10>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA<11>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA<12>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA<13>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA<14>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | ENDC                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| RES                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| START                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

@@ -1,63 +1,63 @@
 INFO:sim:172 - Generating IP...
-Resolving generics for 'Adder'...
-Applying external generics to 'Adder'...
-Delivering associated files for 'Adder'...
-Generating implementation netlist for 'Adder'...
-INFO:sim - Pre-processing HDL files for 'Adder'...
-Running synthesis for 'Adder'
+Applying current project options...
+Finished applying current project options.
+WARNING:sim - A core named 'MULTIPLY' already exists in the project. Output
+   products for this core may be overwritten.
+Resolving generics for 'MULTIPLY'...
+WARNING:sim - A core named 'MULTIPLY' already exists in the project. Output
+   products for this core may be overwritten.
+Applying external generics to 'MULTIPLY'...
+Delivering associated files for 'MULTIPLY'...
+Generating implementation netlist for 'MULTIPLY'...
+INFO:sim - Pre-processing HDL files for 'MULTIPLY'...
+Running synthesis for 'MULTIPLY'
 Running ngcbuild...
-Writing VHO instantiation template for 'Adder'...
-Writing VHDL behavioral simulation model for 'Adder'...
+Writing VHO instantiation template for 'MULTIPLY'...
+Writing VHDL behavioral simulation model for 'MULTIPLY'...
 Delivered 3 files into directory
-C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/ipcore_dir/tmp/_cg/Adde
-r
+C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/ipcore_dir/tmp/_cg/MULT
+IPLY
 Generating ASY schematic symbol...
 INFO:sim:949 - Finished generation of ASY schematic symbol.
-Generating SYM schematic symbol for 'Adder'...
+Generating SYM schematic symbol for 'MULTIPLY'...
 Generating metadata file...
 Generating ISE project...
-XCO file found: Adder.xco
-XMDF file found: Adder_xmdf.tcl
+XCO file found: MULTIPLY.xco
+XMDF file found: MULTIPLY_xmdf.tcl
 Adding
-C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/ipcore_dir/tmp/_cg/Adde
-r.asy -view all -origin_type imported
+C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/ipcore_dir/tmp/_cg/MULT
+IPLY.asy -view all -origin_type imported
 Adding
-C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/ipcore_dir/tmp/_cg/Adde
-r.ngc -view all -origin_type created
+C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/ipcore_dir/tmp/_cg/MULT
+IPLY.ngc -view all -origin_type created
 Checking file
-"C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/ipcore_dir/tmp/_cg/Add
-er.ngc" for project device match ...
+"C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/ipcore_dir/tmp/_cg/MUL
+TIPLY.ngc" for project device match ...
 File
-"C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/ipcore_dir/tmp/_cg/Add
-er.ngc" device information matches project device.
+"C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/ipcore_dir/tmp/_cg/MUL
+TIPLY.ngc" device information matches project device.
 Adding
-C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/ipcore_dir/tmp/_cg/Adde
-r.sym -view all -origin_type imported
+C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/ipcore_dir/tmp/_cg/MULT
+IPLY.sym -view all -origin_type imported
 Adding
-C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/ipcore_dir/tmp/_cg/Adde
-r.vhd -view all -origin_type created
+C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/ipcore_dir/tmp/_cg/MULT
+IPLY.vhd -view all -origin_type created
 INFO:HDLCompiler:1061 - Parsing VHDL file
    "C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/ipcore_dir/tmp/_cg/
-   Adder.vhd" into library work
+   MULTIPLY.vhd" into library work
 INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
 Adding
-C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/ipcore_dir/tmp/_cg/Adde
-r.vho -view all -origin_type imported
-Adding
-C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/ipcore_dir/tmp/_cg/core
-_resources.txt -view all -origin_type imported
-Adding
-C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/ipcore_dir/tmp/_cg/gui_
-latency.txt -view all -origin_type imported
+C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/ipcore_dir/tmp/_cg/MULT
+IPLY.vho -view all -origin_type imported
 INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
    Please set the new top explicitly by running the "project set top" command.
    To re-calculate the new top automatically, set the "Auto Implementation Top"
    property to true.
-Top level has been set to "/Adder"
+Top level has been set to "/MULTIPLY"
 Generating README file...
 Generating FLIST file...
 INFO:sim:948 - Finished FLIST file generation.
 Launching README viewer...
 Moving files to output directory...
 Finished moving files to output directory
-Wrote CGP file for project 'Adder'.
+Wrote CGP file for project 'MULTIPLY'.

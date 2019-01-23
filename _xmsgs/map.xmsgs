@@ -5,85 +5,34 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">RES</arg> has no load.
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">MULTIPLYINST/pcout&lt;47&gt;</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="395" delta="new" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">16</arg> more times for the following (max. 5 shown):
-<arg fmt="%s" index="3">Adder_Inst/s&lt;15&gt;,
-Adder_Inst/s&lt;14&gt;,
-Adder_Inst/s&lt;13&gt;,
-Adder_Inst/s&lt;12&gt;,
-Adder_Inst/s&lt;11&gt;</arg>
+<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">47</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="3">MULTIPLYINST/pcout&lt;46&gt;,
+MULTIPLYINST/pcout&lt;45&gt;,
+MULTIPLYINST/pcout&lt;44&gt;,
+MULTIPLYINST/pcout&lt;43&gt;,
+MULTIPLYINST/pcout&lt;42&gt;</arg>
 To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
 </msg>
 
-<msg type="info" file="MapLib" num="562" delta="new" >No environment variables are currently set.
+<msg type="info" file="MapLib" num="562" delta="old" >No environment variables are currently set.
 </msg>
 
-<msg type="warning" file="MapLib" num="701" delta="new" >Signal <arg fmt="%s" index="1">DATA&lt;14&gt;</arg> connected to top level port <arg fmt="%s" index="2">DATA&lt;14&gt;</arg> has been removed.
+<msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
 </msg>
 
-<msg type="warning" file="MapLib" num="701" delta="new" >Signal <arg fmt="%s" index="1">DATA&lt;13&gt;</arg> connected to top level port <arg fmt="%s" index="2">DATA&lt;13&gt;</arg> has been removed.
+<msg type="info" file="Pack" num="1716" delta="old" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
 </msg>
 
-<msg type="warning" file="MapLib" num="701" delta="new" >Signal <arg fmt="%s" index="1">DATA&lt;12&gt;</arg> connected to top level port <arg fmt="%s" index="2">DATA&lt;12&gt;</arg> has been removed.
+<msg type="info" file="Pack" num="1720" delta="old" >Initializing voltage to <arg fmt="%0.3f" index="1">1.140</arg> Volts. (default - Range: <arg fmt="%0.3f" index="2">1.140</arg> to <arg fmt="%0.3f" index="3">1.260</arg> Volts)
 </msg>
 
-<msg type="warning" file="MapLib" num="701" delta="new" >Signal <arg fmt="%s" index="1">DATA&lt;11&gt;</arg> connected to top level port <arg fmt="%s" index="2">DATA&lt;11&gt;</arg> has been removed.
+<msg type="info" file="Map" num="215" delta="old" >The Interim Design Summary has been generated in the MAP Report (.mrp).
 </msg>
 
-<msg type="warning" file="MapLib" num="701" delta="new" >Signal <arg fmt="%s" index="1">DATA&lt;10&gt;</arg> connected to top level port <arg fmt="%s" index="2">DATA&lt;10&gt;</arg> has been removed.
-</msg>
-
-<msg type="warning" file="MapLib" num="701" delta="new" >Signal <arg fmt="%s" index="1">DATA&lt;9&gt;</arg> connected to top level port <arg fmt="%s" index="2">DATA&lt;9&gt;</arg> has been removed.
-</msg>
-
-<msg type="warning" file="MapLib" num="701" delta="new" >Signal <arg fmt="%s" index="1">DATA&lt;8&gt;</arg> connected to top level port <arg fmt="%s" index="2">DATA&lt;8&gt;</arg> has been removed.
-</msg>
-
-<msg type="warning" file="MapLib" num="701" delta="new" >Signal <arg fmt="%s" index="1">DATA&lt;7&gt;</arg> connected to top level port <arg fmt="%s" index="2">DATA&lt;7&gt;</arg> has been removed.
-</msg>
-
-<msg type="warning" file="MapLib" num="701" delta="new" >Signal <arg fmt="%s" index="1">DATA&lt;6&gt;</arg> connected to top level port <arg fmt="%s" index="2">DATA&lt;6&gt;</arg> has been removed.
-</msg>
-
-<msg type="warning" file="MapLib" num="701" delta="new" >Signal <arg fmt="%s" index="1">DATA&lt;5&gt;</arg> connected to top level port <arg fmt="%s" index="2">DATA&lt;5&gt;</arg> has been removed.
-</msg>
-
-<msg type="warning" file="MapLib" num="701" delta="new" >Signal <arg fmt="%s" index="1">DATA&lt;4&gt;</arg> connected to top level port <arg fmt="%s" index="2">DATA&lt;4&gt;</arg> has been removed.
-</msg>
-
-<msg type="warning" file="MapLib" num="701" delta="new" >Signal <arg fmt="%s" index="1">DATA&lt;3&gt;</arg> connected to top level port <arg fmt="%s" index="2">DATA&lt;3&gt;</arg> has been removed.
-</msg>
-
-<msg type="warning" file="MapLib" num="701" delta="new" >Signal <arg fmt="%s" index="1">DATA&lt;2&gt;</arg> connected to top level port <arg fmt="%s" index="2">DATA&lt;2&gt;</arg> has been removed.
-</msg>
-
-<msg type="warning" file="MapLib" num="701" delta="new" >Signal <arg fmt="%s" index="1">DATA&lt;1&gt;</arg> connected to top level port <arg fmt="%s" index="2">DATA&lt;1&gt;</arg> has been removed.
-</msg>
-
-<msg type="warning" file="MapLib" num="701" delta="new" >Signal <arg fmt="%s" index="1">DATA&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">DATA&lt;0&gt;</arg> has been removed.
-</msg>
-
-<msg type="warning" file="MapLib" num="701" delta="new" >Signal <arg fmt="%s" index="1">START</arg> connected to top level port <arg fmt="%s" index="2">START</arg> has been removed.
-</msg>
-
-<msg type="warning" file="MapLib" num="701" delta="new" >Signal <arg fmt="%s" index="1">CLK</arg> connected to top level port <arg fmt="%s" index="2">CLK</arg> has been removed.
-</msg>
-
-<msg type="info" file="LIT" num="244" delta="new" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
-</msg>
-
-<msg type="info" file="Pack" num="1716" delta="new" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
-</msg>
-
-<msg type="info" file="Pack" num="1720" delta="new" >Initializing voltage to <arg fmt="%0.3f" index="1">1.140</arg> Volts. (default - Range: <arg fmt="%0.3f" index="2">1.140</arg> to <arg fmt="%0.3f" index="3">1.260</arg> Volts)
-</msg>
-
-<msg type="info" file="Map" num="215" delta="new" >The Interim Design Summary has been generated in the MAP Report (.mrp).
-</msg>
-
-<msg type="info" file="Pack" num="1650" delta="new" >Map created a placed design.
+<msg type="info" file="Pack" num="1650" delta="old" >Map created a placed design.
 </msg>
 
 </messages>

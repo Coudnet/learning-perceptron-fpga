@@ -1,0 +1,15 @@
+# Output products list for <DECREMENT>
+DECREMENT.asy
+DECREMENT.gise
+DECREMENT.ngc
+DECREMENT.sym
+DECREMENT.vhd
+DECREMENT.vho
+DECREMENT.xco
+DECREMENT.xise
+DECREMENT\doc\c_addsub_v11_0_readme.txt
+DECREMENT\doc\c_addsub_v11_0_vinfo.html
+DECREMENT\doc\ds214_addsub.pdf
+DECREMENT_flist.txt
+DECREMENT_xmdf.tcl
+_xmsgs\pn_parser.xmsgs

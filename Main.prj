@@ -1,2 +1,4 @@
-vhdl work "ipcore_dir/Adder.vhd"
+vhdl work "ipcore_dir/INCREMENT.vhd"
+vhdl work "ipcore_dir/DECREMENT.vhd"
+vhdl work "ipcore_dir/MULTIPLY.vhd"
 vhdl work "Main.vhd"

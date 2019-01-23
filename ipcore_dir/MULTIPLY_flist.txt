@@ -1,0 +1,15 @@
+# Output products list for <MULTIPLY>
+MULTIPLY.asy
+MULTIPLY.gise
+MULTIPLY.ngc
+MULTIPLY.sym
+MULTIPLY.vhd
+MULTIPLY.vho
+MULTIPLY.xco
+MULTIPLY.xise
+MULTIPLY\doc\xbip_multadd_ds717.pdf
+MULTIPLY\doc\xbip_multadd_v2_0_readme.txt
+MULTIPLY\doc\xbip_multadd_v2_0_vinfo.html
+MULTIPLY_flist.txt
+MULTIPLY_xmdf.tcl
+_xmsgs\pn_parser.xmsgs

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: Main.prj
 
@@ -108,24 +108,393 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\ipcore_dir\Adder.vhd" into library work
-Parsing entity <Adder>.
-Parsing architecture <Adder_a> of entity <adder>.
+Parsing VHDL file "C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\ipcore_dir\INCREMENT.vhd" into library work
+Parsing entity <INCREMENT>.
+Parsing architecture <INCREMENT_a> of entity <increment>.
+Parsing VHDL file "C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\ipcore_dir\DECREMENT.vhd" into library work
+Parsing entity <DECREMENT>.
+Parsing architecture <DECREMENT_a> of entity <decrement>.
+Parsing VHDL file "C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\ipcore_dir\MULTIPLY.vhd" into library work
+Parsing entity <MULTIPLY>.
+Parsing architecture <MULTIPLY_a> of entity <multiply>.
 Parsing VHDL file "C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" into library work
 Parsing entity <Main>.
 Parsing architecture <Behavioral> of entity <main>.
-ERROR:HDLCompiler:607 - "C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 110: Multiple declarations of ">" included via multiple use clauses; none are made directly visible
-INFO:HDLCompiler:1408 - "N:/P.20131013/rtf/vhdl/xst/src/syn_sign.vhd" Line 63. ">" is declared here
-Another match is here
-ERROR:HDLCompiler:1731 - "C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 131: found '0' definitions of operator "+", cannot determine exact overloaded matching definition for "+"
-ERROR:HDLCompiler:1731 - "C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 139: found '0' definitions of operator "-", cannot determine exact overloaded matching definition for "-"
-ERROR:HDLCompiler:854 - "C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 48: Unit <behavioral> ignored due to previous errors.
-VHDL file C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd ignored due to errors
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Main> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:871 - "C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 82: Using initial value "000000000000000000111" for threshold since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 88: Using initial value false for counter_en since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 92: Using initial value '1' for multiply_ce_t since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 93: Using initial value '0' for multiply_sclr_t since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" Line 99: Using initial value '0' for multiply_subtract since it is never assigned
+
+Elaborating entity <MULTIPLY> (architecture <MULTIPLY_a>) from library <work>.
+
+Elaborating entity <INCREMENT> (architecture <INCREMENT_a>) from library <work>.
+
+Elaborating entity <DECREMENT> (architecture <DECREMENT_a>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Main>.
+    Related source file is "C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd".
+INFO:Xst:3210 - "C:\Users\Student\Documents\Fokin_NIRS\TrainingPerseptron\Main.vhd" line 111: Output port <pcout> of the instance <MULTIPLYINST> is unconnected or connected to loadless signal.
+    Found 3-bit register for signal <condition>.
+    Found 20-bit register for signal <result_t>.
+    Found 1-bit register for signal <multiply_a>.
+    Found 16-bit register for signal <multiply_b>.
+    Found 20-bit register for signal <multiply_c>.
+    Found 1-bit register for signal <multiply_clk_t>.
+    Found 1-bit register for signal <active_t>.
+    Found 16-bit register for signal <inc_in>.
+    Found 1-bit register for signal <inc_clk>.
+    Found 16-bit register for signal <weights_t<14>>.
+    Found 16-bit register for signal <weights_t<13>>.
+    Found 16-bit register for signal <weights_t<12>>.
+    Found 16-bit register for signal <weights_t<11>>.
+    Found 16-bit register for signal <weights_t<10>>.
+    Found 16-bit register for signal <weights_t<9>>.
+    Found 16-bit register for signal <weights_t<8>>.
+    Found 16-bit register for signal <weights_t<7>>.
+    Found 16-bit register for signal <weights_t<6>>.
+    Found 16-bit register for signal <weights_t<5>>.
+    Found 16-bit register for signal <weights_t<4>>.
+    Found 16-bit register for signal <weights_t<3>>.
+    Found 16-bit register for signal <weights_t<2>>.
+    Found 16-bit register for signal <weights_t<1>>.
+    Found 16-bit register for signal <weights_t<0>>.
+    Found 16-bit register for signal <dec_in>.
+    Found 1-bit register for signal <dec_clk>.
+    Found 1-bit register for signal <ENDC>.
+INFO:Xst:1799 - State idle is never reached in FSM <condition>.
+    Found finite state machine <FSM_0> for signal <condition>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Power Up State     | init                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 20-bit comparator greater for signal <GND_5_o_result_t[19]_LessThan_4_o> created at line 166
+    WARNING:Xst:2404 -  FFs/Latches <counter_val<1:32>> (without init value) have a constant value of 0 in block <Main>.
+    Summary:
+	inferred 332 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  43 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <Main> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 24
+ 1-bit register                                        : 4
+ 16-bit register                                       : 18
+ 20-bit register                                       : 2
+# Comparators                                          : 1
+ 20-bit comparator greater                             : 1
+# Multiplexers                                         : 43
+ 16-bit 2-to-1 multiplexer                             : 43
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/MULTIPLY.ngc>.
+Reading Secure Unit <blk00000001>.
+Reading core <ipcore_dir/INCREMENT.ngc>.
+Reading Secure Unit <blk00000001>.
+Reading core <ipcore_dir/DECREMENT.ngc>.
+Reading Secure Unit <blk00000001>.
+Loading core <MULTIPLY> for timing and area information for instance <MULTIPLYINST>.
+Loading core <INCREMENT> for timing and area information for instance <INCREMENTINST>.
+Loading core <DECREMENT> for timing and area information for instance <DECREMENTINST>.
+WARNING:Xst:1710 - FF/Latch <multiply_clk_t> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 332
+ Flip-Flops                                            : 332
+# Comparators                                          : 1
+ 20-bit comparator greater                             : 1
+# Multiplexers                                         : 433
+ 1-bit 2-to-1 multiplexer                              : 416
+ 16-bit 2-to-1 multiplexer                             : 17
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <multiply_clk_t> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <condition[1:3]> with user encoding.
+------------------------
+ State      | Encoding
+------------------------
+ init       | 000
+ sum        | 001
+ idle       | unreached
+ compare    | 011
+ activation | 100
+ endcs      | 101
+ inc        | 110
+ dec        | 111
+------------------------
+
+Optimizing unit <Main> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 21.
+FlipFlop condition_FSM_FFd1 has been replicated 2 time(s)
+FlipFlop condition_FSM_FFd2 has been replicated 3 time(s)
+FlipFlop condition_FSM_FFd3 has been replicated 3 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <Main> :
+	Found 2-bit shift register for signal <multiply_c_0>.
+	Found 2-bit shift register for signal <multiply_c_1>.
+	Found 2-bit shift register for signal <multiply_c_2>.
+Unit <Main> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 336
+ Flip-Flops                                            : 336
+# Shift Registers                                      : 3
+ 2-bit shift register                                  : 3
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Main.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 413
+#      GND                         : 4
+#      INV                         : 1
+#      LUT3                        : 7
+#      LUT4                        : 36
+#      LUT5                        : 20
+#      LUT6                        : 341
+#      VCC                         : 4
+# FlipFlops/Latches                : 339
+#      FD                          : 13
+#      FDE                         : 326
+# Shift Registers                  : 3
+#      SRLC16E                     : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 18
+#      IBUF                        : 17
+#      OBUF                        : 1
+# DSPs                             : 3
+#      DSP48A1                     : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx4tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             339  out of   4800     7%  
+ Number of Slice LUTs:                  408  out of   2400    17%  
+    Number used as Logic:               405  out of   2400    16%  
+    Number used as Memory:                3  out of   1200     0%  
+       Number used as SRL:                3
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    459
+   Number with an unused Flip Flop:     120  out of    459    26%  
+   Number with an unused LUT:            51  out of    459    11%  
+   Number of fully used LUT-FF pairs:   288  out of    459    62%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          19
+ Number of bonded IOBs:                  19  out of    102    18%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                      3  out of      8    37%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                     | Load  |
+-----------------------------------+-------------------------------------------+-------+
+CLK                                | BUFGP                                     | 342   |
+multiply_clk_t                     | NONE(MULTIPLYINST/blk00000001/blk00000004)| 3     |
+-----------------------------------+-------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.325ns (Maximum Frequency: 300.720MHz)
+   Minimum input arrival time before clock: 6.740ns
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 3.325ns (frequency: 300.720MHz)
+  Total number of paths / destination ports: 1986 / 651
+-------------------------------------------------------------------------
+Delay:               3.325ns (Levels of Logic = 3)
+  Source:            weights_t_11_0 (FF)
+  Destination:       dec_in_0 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: weights_t_11_0 to dec_in_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.447   0.864  weights_t_11_0 (weights_t_11_0)
+     LUT6:I2->O            2   0.203   0.617  Mmux_dec_in[15]_weights_t[14][15]_mux_66_OUT51 (Mmux_dec_in[15]_weights_t[14][15]_mux_66_OUT5)
+     LUT5:I4->O            1   0.205   0.684  Mmux_dec_in[15]_weights_t[14][15]_mux_66_OUT57_SW0 (N26)
+     LUT6:I4->O            2   0.203   0.000  Mmux_dec_in[15]_weights_t[14][15]_mux_66_OUT58 (dec_in[15]_weights_t[14][15]_mux_66_OUT<0>)
+     FDE:D                     0.102          dec_in_0
+    ----------------------------------------
+    Total                      3.325ns (1.160ns logic, 2.165ns route)
+                                       (34.9% logic, 65.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 1725 / 313
+-------------------------------------------------------------------------
+Offset:              6.740ns (Levels of Logic = 4)
+  Source:            DATA<14> (PAD)
+  Destination:       dec_in_0 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: DATA<14> to dec_in_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            50   1.222   1.892  DATA_14_IBUF (DATA_14_IBUF)
+     LUT5:I0->O            1   0.203   0.827  _n0348_inv21 (_n0348_inv21)
+     LUT6:I2->O            2   0.203   0.864  _n0348_inv23 (_n0348_inv23)
+     LUT4:I0->O           16   0.203   1.004  _n0605_inv1 (_n0605_inv)
+     FDE:CE                    0.322          dec_in_0
+    ----------------------------------------
+    Total                      6.740ns (2.153ns logic, 4.587ns route)
+                                       (31.9% logic, 68.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            endc_t (FF)
+  Destination:       ENDC (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: endc_t to ENDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  endc_t (endc_t)
+     OBUF:I->O                 2.571          ENDC_OBUF (ENDC)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    3.325|         |         |         |
+multiply_clk_t |    2.851|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock multiply_clk_t
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    3.295|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.99 secs
+ 
 --> 
 
-Total memory usage is 165064 kilobytes
+Total memory usage is 201860 kilobytes
 
-Number of errors   :    4 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

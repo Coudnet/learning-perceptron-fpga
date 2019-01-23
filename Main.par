@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-LAB306-1-SEAT5::  Mon Jan 14 14:32:38 2019
+LAB306-1-SEAT5::  Wed Jan 23 12:46:22 2019
 
 par -w -intstyle ise -ol high -mt off Main_map.ncd Main.ncd Main.pcf 
 
@@ -26,23 +26,56 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                     0 out of   4,800    0%
-  Number of Slice LUTs:                          0 out of   2,400    0%
+  Number of Slice Registers:                   339 out of   4,800    7%
+    Number used as Flip Flops:                 339
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        416 out of   2,400   17%
+    Number used as logic:                      405 out of   2,400   16%
+      Number using O6 output only:             405
+      Number using O5 output only:               0
+      Number using O5 and O6:                    0
+      Number used as ROM:                        0
+    Number used as Memory:                       3 out of   1,200    1%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:             3
+        Number using O6 output only:             3
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:      8
+      Number with same-slice register load:      8
+      Number with same-slice carry load:         0
+      Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                     0 out of     600    0%
+  Number of occupied Slices:                   135 out of     600   22%
   Number of MUXCYs used:                         0 out of   1,200    0%
-  Number of LUT Flip Flop pairs used:            0
+  Number of LUT Flip Flop pairs used:          434
+    Number with an unused Flip Flop:           103 out of     434   23%
+    Number with an unused LUT:                  18 out of     434    4%
+    Number of fully used LUT-FF pairs:         313 out of     434   72%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of   4,800    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                         1 out of     102    1%
+  Number of bonded IOBs:                        19 out of     102   18%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      12    0%
   Number of RAMB8BWERs:                          0 out of      24    0%
   Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
   Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
-  Number of BUFG/BUFGMUXs:                       0 out of      16    0%
+  Number of BUFG/BUFGMUXs:                       1 out of      16    6%
+    Number used as BUFGs:                        1
+    Number used as BUFGMUX:                      0
   Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
   Number of ILOGIC2/ISERDES2s:                   0 out of     200    0%
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
@@ -51,7 +84,7 @@ Specific Feature Utilization:
   Number of BUFHs:                               0 out of     128    0%
   Number of BUFPLLs:                             0 out of       8    0%
   Number of BUFPLL_MCBs:                         0 out of       4    0%
-  Number of DSP48A1s:                            0 out of       8    0%
+  Number of DSP48A1s:                            3 out of       8   37%
   Number of ICAPs:                               0 out of       1    0%
   Number of PCILOGICSEs:                         0 out of       2    0%
   Number of PLL_ADVs:                            0 out of       2    0%
@@ -69,29 +102,29 @@ Finished initial Timing Analysis.  REAL time: 3 secs
 Starting Router
 
 
-Phase  1  : 1 unrouted;      REAL time: 3 secs 
+Phase  1  : 2947 unrouted;      REAL time: 3 secs 
 
-Phase  2  : 1 unrouted;      REAL time: 3 secs 
+Phase  2  : 2531 unrouted;      REAL time: 3 secs 
 
-Phase  3  : 0 unrouted;      REAL time: 3 secs 
+Phase  3  : 1444 unrouted;      REAL time: 4 secs 
 
-Phase  4  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
+Phase  4  : 1444 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
 
 Updating file: Main.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
-Total REAL time to Router completion: 3 secs 
-Total CPU time to Router completion: 3 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Total REAL time to Router completion: 6 secs 
+Total CPU time to Router completion: 6 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -104,16 +137,34 @@ Generating "PAR" statistics.
 INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
 Timing Score: 0 (Setup: 0, Hold: 0)
 
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net CLK | SETUP       |         N/A|     4.633ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.434ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
 
 
 Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 4 secs 
-Total CPU time to PAR completion: 3 secs 
+Total REAL time to PAR completion: 6 secs 
+Total CPU time to PAR completion: 6 secs 
 
-Peak Memory Usage:  226 MB
+Peak Memory Usage:  244 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
