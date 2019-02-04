@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-01-23T12:17:28</DateModified>
+  <DateModified>2019-02-04T15:19:37</DateModified>
   <ModuleName>Main</ModuleName>
   <SummaryTimeStamp>2019-01-14T14:32:50</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron/iseconfig/Main.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Student/Documents/Fokin_NIRS/TrainingPerseptron\</ImplementationReportsDirectory>
+  <SavedFilePath>D:/NIRS/NeuronLearning/learning-perceptron-fpga/iseconfig/Main.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>D:/NIRS/NeuronLearning/learning-perceptron-fpga\</ImplementationReportsDirectory>
   <DateInitialized>2019-01-14T13:52:47</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

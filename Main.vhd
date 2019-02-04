@@ -33,11 +33,15 @@ use IEEE.std_logic_unsigned.all;
 --use UNISIM.VComponents.all;
 
 entity Main is
-    Port ( DATA : in  STD_LOGIC_VECTOR (14 downto 0);
+    Port ( DATAIN : in  STD_LOGIC_VECTOR (14 downto 0);
 			  CLK : in STD_LOGIC;
            START : in  STD_LOGIC;
            RES : in  STD_LOGIC;
-           ENDC : out  STD_LOGIC);
+			  STARTREAD : in STD_LOGIC;
+           ENDC : out  STD_LOGIC;
+           DATA_READY : out  STD_LOGIC;
+			  DATAOUT : out  STD_LOGIC_VECTOR (15 downto 0)
+			  );
 end Main;
 
 architecture Behavioral of Main is
@@ -82,11 +86,15 @@ signal weights_t : weights;
 signal threshold : STD_LOGIC_VECTOR(20 DOWNTO 0) := "000000000000000000111";
 signal active_t : STD_LOGIC;
 
-type condition_type is (INIT, SUM, IDLE, COMPARE, ACTIVATION,  ENDCS, INC, DEC);
+type condition_type is (INIT, SUM, IDLE, COMPARE, ACTIVATION,  ENDCS, INC, DEC, START_READ);
 signal condition : condition_type := INIT;
 
 signal counter_en : boolean := false;
 signal counter_val : integer := 0;
+
+signal weights_value_conter_t : integer := 0;
+signal data_out_t : STD_LOGIC_VECTOR(15 DOWNTO 0);
+signal data_ready_t : STD_LOGIC := '0';
 
 signal multiply_clk_t : STD_LOGIC;
 signal multiply_ce_t : STD_LOGIC := '1';
@@ -141,14 +149,17 @@ begin
 		case condition is
 			when INIT =>
 				endc_t <= '0';
+				data_ready_t <= '0';
 				if(START = '1') then
 					condition <= SUM;
+				elsif(STARTREAD = '1') then
+					condition <= START_READ;
 				end if;
 				
 			when SUM =>
 				result_t <= "00000000000000000000";
 				for i in 0 to 14 loop
-					multiply_a(0) <= DATA(i);
+					multiply_a(0) <= DATAIN(i);
 					multiply_b <= weights_t(i);
 					multiply_c <= result_t;
 					multiply_clk_t <= '1';
@@ -183,7 +194,7 @@ begin
 				
 			when INC => 
 				for i in 0 to 14 loop
-					if(DATA(i) = '1') then
+					if(DATAIN(i) = '1') then
 						inc_in <= weights_t(i);
 						inc_clk <= '1';
 						inc_clk <= '0';
@@ -194,7 +205,7 @@ begin
 				
 			when DEC => 
 				for i in 0 to 14 loop
-					if(DATA(i) = '1') then
+					if(DATAIN(i) = '1') then
 						dec_in <= weights_t(i);
 						dec_clk <= '1';
 						dec_clk <= '0';
@@ -207,6 +218,17 @@ begin
 				endc_t <= '1';
 				condition <= INIT;
 				
+			when START_READ => 
+				if(weights_value_conter_t = 15) then 
+					weights_value_conter_t <= 0;
+					condition <= INIT;
+				else 
+					data_out_t <= weights_t(weights_value_conter_t);
+					weights_value_conter_t <= weights_value_conter_t + 1;
+					data_ready_t <= '1';
+					condition <= INIT;
+				end if;
+				
 		end case;
 
 		if(counter_en = true) then
@@ -218,6 +240,8 @@ begin
 end process;
 
 ENDC <= endc_t;
+DATAOUT <= data_out_t;
+DATA_READY <= data_ready_t;
 
 end Behavioral;
 
